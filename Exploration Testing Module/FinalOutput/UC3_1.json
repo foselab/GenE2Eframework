@@ -1,0 +1,117 @@
+[
+  {
+    "test_case_id": "UC3.1_TC1",
+    "title": "Visualizzazione schede censimento con dati validi e paginazione",
+    "preconditions": "UC3",
+    "postconditions": "L’utente visualizza le informazioni corrispondenti alla paginazione richiesta",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione di visualizzazione schede censimento",
+        "expected": "La sezione viene visualizzata correttamente"
+      },
+      {
+        "step": "Seleziona un numero di elementi per pagina e scorri tra le pagine",
+        "expected": "Le informazioni vengono visualizzate in forma tabellare e paginata correttamente"
+      },
+      {
+        "step": "Clicca sul nome di una colonna per ordinare i dati",
+        "expected": "I dati vengono ordinati correttamente"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.1"
+  },
+  {
+    "test_case_id": "UC3.1_TC2",
+    "title": "Visualizzazione schede censimento con ordinamento su più colonne",
+    "preconditions": "UC3",
+    "postconditions": "L’utente visualizza le informazioni ordinate correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione di visualizzazione schede censimento",
+        "expected": "La sezione viene visualizzata correttamente"
+      },
+      {
+        "step": "Clicca su più colonne per ordinare i dati in modo multiplo",
+        "expected": "I dati vengono ordinati correttamente secondo gli ordini selezionati"
+      },
+      {
+        "step": "Verifica che l’ordinamento sia mantenuto anche cambiando pagina",
+        "expected": "L’ordinamento rimane coerente"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Media",
+    "use_case_id": "UC3.1"
+  },
+  {
+    "test_case_id": "UC3.1_TC3",
+    "title": "Visualizzazione schede censimento con nessun dato",
+    "preconditions": "UC3",
+    "postconditions": "L’utente visualizza un messaggio di assenza di dati",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione di visualizzazione schede censimento senza dati disponibili",
+        "expected": "La sezione viene visualizzata con un messaggio di assenza di dati"
+      },
+      {
+        "step": "Verifica che non siano presenti elementi nella tabella",
+        "expected": "La tabella è vuota"
+      },
+      {
+        "step": "Controlla la presenza di un messaggio informativo per l’utente",
+        "expected": "Il messaggio è presente e chiaro"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Bassa",
+    "use_case_id": "UC3.1"
+  },
+  {
+    "test_case_id": "UC3.1_TC4",
+    "title": "Boundary test: visualizzazione con un solo elemento",
+    "preconditions": "UC3",
+    "postconditions": "L’utente visualizza l’elemento singolo correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione di visualizzazione schede censimento con un solo elemento disponibile",
+        "expected": "La sezione viene visualizzata con il singolo elemento"
+      },
+      {
+        "step": "Verifica che l’elemento sia visualizzato correttamente in tabella",
+        "expected": "L’elemento è presente e le informazioni sono complete"
+      },
+      {
+        "step": "Controlla la funzionalità di ordinamento su una colonna",
+        "expected": "L’ordinamento non ha effetto su un solo elemento, ma non genera errori"
+      }
+    ],
+    "test_type": "Boundary",
+    "priority": "Media",
+    "use_case_id": "UC3.1"
+  },
+  {
+    "test_case_id": "UC3.1_TC5",
+    "title": "Usabilità: navigazione e scorribilità della tabella",
+    "preconditions": "UC3",
+    "postconditions": "L’utente può navigare agevolmente nella tabella",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione di visualizzazione schede censimento con molti elementi",
+        "expected": "La sezione viene visualizzata correttamente"
+      },
+      {
+        "step": "Scorri lateralmente per visualizzare tutte le colonne",
+        "expected": "Le colonne vengono visualizzate senza problemi"
+      },
+      {
+        "step": "Cambia pagina e verifica la coerenza dell’interfaccia",
+        "expected": "L’interfaccia rimane coerente e facile da usare"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC3.1"
+  }
+]

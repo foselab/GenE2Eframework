@@ -1,0 +1,117 @@
+[
+  {
+    "test_case_id": "UC2.1_TC1",
+    "title": "Download PDF con dati validi e conferma",
+    "preconditions": "UC2",
+    "postconditions": "L’utente ha scaricato il file, può aprirlo dalla apposita sezione del browser utilizzato ed il file è ben formato",
+    "test_steps": [
+      {
+        "step": "Clicca sul tasto di download PDF",
+        "expected": "Il sistema richiede conferma per l’operazione"
+      },
+      {
+        "step": "Conferma la richiesta di download",
+        "expected": "Il sistema inizia il download del file"
+      },
+      {
+        "step": "Verifica che il file sia stato scaricato correttamente",
+        "expected": "Il file è presente nella cartella dei download e può essere aperto"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC2.1"
+  },
+  {
+    "test_case_id": "UC2.1_TC2",
+    "title": "Download PDF senza conferma",
+    "preconditions": "UC2",
+    "postconditions": "Il sistema non avvia il download",
+    "test_steps": [
+      {
+        "step": "Clicca sul tasto di download PDF",
+        "expected": "Il sistema richiede conferma per l’operazione"
+      },
+      {
+        "step": "Annulla la richiesta di download",
+        "expected": "Il sistema non inizia il download del file"
+      },
+      {
+        "step": "Verifica che il file non sia stato scaricato",
+        "expected": "Il file non è presente nella cartella dei download"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC2.1"
+  },
+  {
+    "test_case_id": "UC2.1_TC3",
+    "title": "Download PDF con errore di sistema",
+    "preconditions": "UC2",
+    "postconditions": "L’utente visualizza un messaggio di operazione completata con un errore",
+    "test_steps": [
+      {
+        "step": "Clicca sul tasto di download PDF",
+        "expected": "Il sistema richiede conferma per l’operazione"
+      },
+      {
+        "step": "Conferma la richiesta di download",
+        "expected": "Il sistema visualizza un messaggio di errore"
+      },
+      {
+        "step": "Verifica che il messaggio di errore sia stato visualizzato",
+        "expected": "Il messaggio di errore è visibile e informa dell’impossibilità di completare l’operazione"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Alta",
+    "use_case_id": "UC2.1"
+  },
+  {
+    "test_case_id": "UC2.1_TC4",
+    "title": "Download PDF con più tentativi",
+    "preconditions": "UC2",
+    "postconditions": "L’utente ha scaricato il file, può aprirlo dalla apposita sezione del browser utilizzato ed il file è ben formato",
+    "test_steps": [
+      {
+        "step": "Clicca sul tasto di download PDF e annulla la richiesta",
+        "expected": "Il sistema non inizia il download del file"
+      },
+      {
+        "step": "Ripeti il tentativo di download",
+        "expected": "Il sistema richiede nuovamente conferma per l’operazione"
+      },
+      {
+        "step": "Conferma la richiesta di download",
+        "expected": "Il sistema inizia il download del file"
+      }
+    ],
+    "test_type": "Boundary",
+    "priority": "Media",
+    "use_case_id": "UC2.1"
+  },
+  {
+    "test_case_id": "UC2.1_TC5",
+    "title": "Download PDF con browser diverso",
+    "preconditions": "UC2",
+    "postconditions": "L’utente ha scaricato il file, può aprirlo dalla apposita sezione del browser utilizzato ed il file è ben formato",
+    "test_steps": [
+      {
+        "step": "Cambia browser e accedi alla dashboard",
+        "expected": "La dashboard è visibile e funzionale"
+      },
+      {
+        "step": "Clicca sul tasto di download PDF",
+        "expected": "Il sistema richiede conferma per l’operazione"
+      },
+      {
+        "step": "Conferma la richiesta di download",
+        "expected": "Il file è stato scaricato correttamente nel nuovo browser"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC2.1"
+  }
+]

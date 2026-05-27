@@ -1,0 +1,94 @@
+[
+  {
+    "test_case_id": "UC6_TC1",
+    "title": "Logout utente con successo",
+    "preconditions": "UC1",
+    "postconditions": "L’utente non è più autenticato ed è a conoscenza che l’operazione ha avuto successo",
+    "test_steps": [
+      {
+        "step": "Accedi come utente registrato al sistema",
+        "expected": "La dashboard dell’utente viene visualizzata correttamente"
+      },
+      {
+        "step": "Clicca sul proprio nome utente in alto a destra e seleziona il tasto “Logout”",
+        "expected": "Il processo di logout inizia"
+      },
+      {
+        "step": "Conferma l’intenzione di effettuare il logout",
+        "expected": "Un messaggio di successo conferma la disconnessione"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC6"
+  },
+  {
+    "test_case_id": "UC6_TC2",
+    "title": "Logout senza conferma",
+    "preconditions": "UC1",
+    "postconditions": "L’operazione di logout non ha esito positivo",
+    "test_steps": [
+      {
+        "step": "Accedi come utente registrato al sistema",
+        "expected": "La dashboard dell’utente viene visualizzata correttamente"
+      },
+      {
+        "step": "Clicca sul proprio nome utente in alto a destra e seleziona il tasto “Logout”",
+        "expected": "Il processo di logout inizia"
+      },
+      {
+        "step": "Annulla l’operazione di logout prima della conferma",
+        "expected": "L’utente rimane autenticato"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC6"
+  },
+  {
+    "test_case_id": "UC6_TC3",
+    "title": "Logout con più tentativi di accesso falliti",
+    "preconditions": "UC1",
+    "postconditions": "L’utente non è più autenticato e il sistema registra gli accessi falliti",
+    "test_steps": [
+      {
+        "step": "Accedi come utente registrato al sistema con credenziali errate più volte",
+        "expected": "Il sistema segnala gli errori di login"
+      },
+      {
+        "step": "Dopo aver esaurito i tentativi, clicca sul proprio nome utente e seleziona il tasto “Logout”",
+        "expected": "Il processo di logout inizia"
+      },
+      {
+        "step": "Conferma l’intenzione di effettuare il logout",
+        "expected": "Un messaggio di successo conferma la disconnessione"
+      }
+    ],
+    "test_type": "Edge",
+    "priority": "Bassa",
+    "use_case_id": "UC6"
+  },
+  {
+    "test_case_id": "UC6_TC4",
+    "title": "Logout da più pagine del sistema",
+    "preconditions": "UC1",
+    "postconditions": "L’utente non è più autenticato in tutte le pagine",
+    "test_steps": [
+      {
+        "step": "Accedi come utente registrato al sistema e naviga su diverse pagine",
+        "expected": "Tutte le pagine vengono visualizzate correttamente"
+      },
+      {
+        "step": "Clicca sul proprio nome utente in alto a destra e seleziona il tasto “Logout” da una qualsiasi di queste pagine",
+        "expected": "Il processo di logout inizia"
+      },
+      {
+        "step": "Conferma l’intenzione di effettuare il logout",
+        "expected": "Un messaggio di successo conferma la disconnessione e l’accesso alle pagine non è più possibile"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC6"
+  }
+]

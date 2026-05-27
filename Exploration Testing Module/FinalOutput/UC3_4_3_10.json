@@ -1,0 +1,123 @@
+[
+  {
+    "test_case_id": "UC3.4.3.10_TC1",
+    "title": "Modifica dati apparecchio con successo",
+    "preconditions": "UC3.4.3",
+    "postconditions": "L’utente visualizza un messaggio di conferma dell’operazione andata a buon fine",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected_result": "Il POD viene selezionato correttamente"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona il pannello elettrico, poi il punto luce e infine il dispositivo punto luce",
+        "expected_result": "La struttura ad albero viene espansa correttamente"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati apparecchio e compila il form con informazioni valide",
+        "expected_result": "Il form viene compilato senza errori"
+      },
+      {
+        "step": "Applica le modifiche con l’apposito tasto",
+        "expected_result": "L’utente visualizza un messaggio di conferma dell’operazione"
+      }
+    ],
+    "test_type": "Positivo"
+  },
+  {
+    "test_case_id": "UC3.4.3.10_TC2",
+    "title": "Modifica dati apparecchio con dati non validi",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Viene mostrato un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected_result": "Il POD viene selezionato correttamente"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona il pannello elettrico, poi il punto luce e infine il dispositivo punto luce",
+        "expected_result": "La struttura ad albero viene espansa correttamente"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati apparecchio e compila il form con informazioni non valide (ad esempio, un campo obbligatorio vuoto)",
+        "expected_result": "Il form non può essere inviato a causa degli errori"
+      },
+      {
+        "step": "Tenta di applicare le modifiche con l’apposito tasto",
+        "expected_result": "Viene mostrato un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo"
+  },
+  {
+    "test_case_id": "UC3.4.3.10_TC3",
+    "title": "Modifica dati apparecchio senza selezionare il dispositivo punto luce",
+    "preconditions": "UC3.4.3",
+    "postconditions": "L’operazione non può essere completata",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected_result": "Il POD viene selezionato correttamente"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona il pannello elettrico, poi il punto luce senza selezionare il dispositivo punto luce",
+        "expected_result": "La struttura ad albero viene espansa parzialmente"
+      },
+      {
+        "step": "Tenta di accedere al tab relativo ai dati apparecchio",
+        "expected_result": "L’accesso non è possibile senza la selezione del dispositivo punto luce"
+      }
+    ],
+    "test_type": "Negativo"
+  },
+  {
+    "test_case_id": "UC3.4.3.10_TC4",
+    "title": "Modifica dati apparecchio con campi obbligatori mancanti",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Viene mostrato un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected_result": "Il POD viene selezionato correttamente"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona il pannello elettrico, poi il punto luce e infine il dispositivo punto luce",
+        "expected_result": "La struttura ad albero viene espansa correttamente"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati apparecchio e lascia vuoti i campi obbligatori",
+        "expected_result": "Il form non può essere inviato a causa degli errori"
+      },
+      {
+        "step": "Tenta di applicare le modifiche con l’apposito tasto",
+        "expected_result": "Viene mostrato un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo"
+  },
+  {
+    "test_case_id": "UC3.4.3.10_TC5",
+    "title": "Modifica dati apparecchio con successo e conferma",
+    "preconditions": "UC3.4.3",
+    "postconditions": "L’utente visualizza un messaggio di conferma dell’operazione andata a buon fine",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected_result": "Il POD viene selezionato correttamente"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona il pannello elettrico, poi il punto luce e infine il dispositivo punto luce",
+        "expected_result": "La struttura ad albero viene espansa correttamente"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati apparecchio, compila il form con informazioni valide e applica le modifiche",
+        "expected_result": "L’operazione ha successo"
+      },
+      {
+        "step": "Conferma le modifiche",
+        "expected_result": "Viene visualizzato un messaggio di conferma dell’operazione andata a buon fine"
+      }
+    ],
+    "test_type": "Positivo"
+  }
+]

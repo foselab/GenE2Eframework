@@ -1,0 +1,97 @@
+[
+  {
+    "test_case_id": "UC3.4.2_TC1",
+    "title": "Elimina scheda censimento con conferma",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente visualizza un messaggio di conferma dell’operazione andata a buon fine",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di cancellazione su una scheda censimento esistente",
+        "expected": "Viene richiesta la conferma dell’eliminazione"
+      },
+      {
+        "step": "Conferma l’eliminazione della scheda",
+        "expected": "Il sistema elimina la scheda e visualizza un messaggio di conferma"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.2"
+  },
+  {
+    "test_case_id": "UC3.4.2_TC2",
+    "title": "Annulla eliminazione scheda censimento",
+    "preconditions": "UC3.4",
+    "postconditions": "L’eliminazione della scheda viene interrotta",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di cancellazione su una scheda censimento esistente",
+        "expected": "Viene richiesta la conferma dell’eliminazione"
+      },
+      {
+        "step": "Annulla l’eliminazione della scheda",
+        "expected": "L’operazione di eliminazione viene interrotta e la scheda rimane intatta"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.2"
+  },
+  {
+    "test_case_id": "UC3.4.2_TC3",
+    "title": "Elimina scheda censimento non esistente",
+    "preconditions": "UC3.4",
+    "postconditions": "Il sistema segnala che la scheda non esiste",
+    "test_steps": [
+      {
+        "step": "Tenta di selezionare l’operazione di cancellazione su una scheda censimento inesistente",
+        "expected": "Il sistema segnala l’assenza della scheda"
+      },
+      {
+        "step": "Conferma comunque l’eliminazione",
+        "expected": "L’operazione fallisce e viene visualizzato un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.2"
+  },
+  {
+    "test_case_id": "UC3.4.2_TC4",
+    "title": "Elimina scheda censimento con dati parziali",
+    "preconditions": "UC3.4",
+    "postconditions": "Il sistema gestisce correttamente i dati parziali",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di cancellazione su una scheda censimento con dati parziali",
+        "expected": "Viene richiesta la conferma dell’eliminazione"
+      },
+      {
+        "step": "Conferma l’eliminazione della scheda",
+        "expected": "Il sistema elimina correttamente la scheda anche se contiene dati parziali"
+      }
+    ],
+    "test_type": "Edge",
+    "priority": "Bassa",
+    "use_case_id": "UC3.4.2"
+  },
+  {
+    "test_case_id": "UC3.4.2_TC5",
+    "title": "Conferma eliminazione senza selezionare scheda",
+    "preconditions": "UC3.4",
+    "postconditions": "Il sistema richiede la selezione di una scheda",
+    "test_steps": [
+      {
+        "step": "Tenta di confermare l’eliminazione senza aver selezionato una scheda censimento",
+        "expected": "Il sistema segnala che è necessario selezionare una scheda"
+      },
+      {
+        "step": "Seleziona una scheda e poi conferma l’eliminazione",
+        "expected": "L’operazione di eliminazione procede correttamente"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.2"
+  }
+]

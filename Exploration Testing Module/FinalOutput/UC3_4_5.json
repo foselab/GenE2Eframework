@@ -1,0 +1,113 @@
+[
+  {
+    "test_case_id": "UC3.4.5_TC1",
+    "title": "Visualizzazione dettaglio scheda censimento con dati validi",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente visualizza le informazioni relative alla scheda censimento",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di dettaglio su una scheda censimento esistente",
+        "expected": "La pagina di dettaglio si apre correttamente"
+      },
+      {
+        "step": "Verifica la presenza dei dati generali dell’area e della gerarchia dei POD e Aree Omogenee",
+        "expected": "Tutti i dati richiesti sono visualizzati correttamente"
+      },
+      {
+        "step": "Naviga nella gerarchia dei POD e Aree Omogenee",
+        "expected": "La navigazione avviene senza errori"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.5"
+  },
+  {
+    "test_case_id": "UC3.4.5_TC2",
+    "title": "Tentativo di modifica dei dati nella pagina di dettaglio",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente non può modificare i dati",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di dettaglio su una scheda censimento esistente",
+        "expected": "La pagina di dettaglio si apre"
+      },
+      {
+        "step": "Tenta di modificare i dati visualizzati nella pagina di dettaglio",
+        "expected": "Il sistema non permette la modifica dei campi"
+      },
+      {
+        "step": "Verifica che le informazioni rimangano invariate",
+        "expected": "I dati non sono stati alterati"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.5"
+  },
+  {
+    "test_case_id": "UC3.4.5_TC3",
+    "title": "Visualizzazione dettaglio scheda censimento con dati parzialmente mancanti",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente visualizza le informazioni disponibili relative alla scheda censimento",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di dettaglio su una scheda censimento con dati parzialmente mancanti",
+        "expected": "La pagina di dettaglio si apre mostrando i dati disponibili"
+      },
+      {
+        "step": "Verifica la presenza dei dati generali dell’area e della gerarchia dei POD e Aree Omogenee, anche se parziali",
+        "expected": "I dati disponibili sono visualizzati correttamente"
+      },
+      {
+        "step": "Naviga nella gerarchia dei POD e Aree Omogenee per verificare la completezza dei dati",
+        "expected": "La navigazione avviene senza errori, mostrando i dati parziali"
+      }
+    ],
+    "test_type": "Boundary",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.5"
+  },
+  {
+    "test_case_id": "UC3.4.5_TC4",
+    "title": "Selezione di una scheda censimento non esistente",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente riceve un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di dettaglio su una scheda censimento non esistente",
+        "expected": "Il sistema mostra un messaggio di errore per scheda non trovata"
+      },
+      {
+        "step": "Verifica che il messaggio di errore sia chiaro e utile",
+        "expected": "Il messaggio è comprensibile e indica la causa dell’errore"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.5"
+  },
+  {
+    "test_case_id": "UC3.4.5_TC5",
+    "title": "Usabilità della navigazione nella gerarchia dei POD e Aree Omogenee",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente può navigare agevolmente nella gerarchia",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di dettaglio su una scheda censimento esistente",
+        "expected": "La pagina di dettaglio si apre"
+      },
+      {
+        "step": "Naviga nella gerarchia dei POD e Aree Omogenee utilizzando i controlli disponibili",
+        "expected": "La navigazione è intuitiva e funzionale"
+      },
+      {
+        "step": "Verifica che le informazioni visualizzate siano coerenti con la posizione nella gerarchia",
+        "expected": "I dati mostrati sono pertinenti alla selezione effettuata"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.5"
+  }
+]

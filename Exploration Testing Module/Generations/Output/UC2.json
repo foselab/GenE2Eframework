@@ -1,0 +1,78 @@
+[
+  {
+    "test_case_id": "UC2_TC1",
+    "title": "Apertura della dashboard con successo",
+    "preconditions": "UC1",
+    "postconditions": "La sezione relativa alla dashboard viene visualizzata correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi al menù laterale di sinistra e seleziona la voce 'Dashboard'",
+        "expected": "La sezione della dashboard si apre correttamente"
+      },
+      {
+        "step": "Verifica che tutti gli elementi della dashboard siano visualizzati",
+        "expected": "Tutti gli elementi sono presenti e visibili"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC2"
+  },
+  {
+    "test_case_id": "UC2_TC2",
+    "title": "Apertura della dashboard senza autorizzazione",
+    "preconditions": "UC1",
+    "postconditions": "L’accesso alla dashboard viene negato",
+    "test_steps": [
+      {
+        "step": "Tenta di accedere alla dashboard senza essere loggato",
+        "expected": "Il sistema richiede l'autenticazione"
+      },
+      {
+        "step": "Inserisci credenziali non valide",
+        "expected": "L’accesso viene negato e compare un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC2"
+  },
+  {
+    "test_case_id": "UC2_TC3",
+    "title": "Apertura della dashboard con browser non supportato",
+    "preconditions": "UC1",
+    "postconditions": "La dashboard potrebbe non essere visualizzata correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi alla dashboard utilizzando un browser non supportato",
+        "expected": "Il layout o alcuni elementi potrebbero non essere visualizzati correttamente"
+      },
+      {
+        "step": "Verifica la compatibilità del browser con il sistema",
+        "expected": "Viene suggerito di utilizzare un browser supportato"
+      }
+    ],
+    "test_type": "Compatibilità",
+    "priority": "Bassa",
+    "use_case_id": "UC2"
+  },
+  {
+    "test_case_id": "UC2_TC4",
+    "title": "Apertura della dashboard con schermo di piccole dimensioni",
+    "preconditions": "UC1",
+    "postconditions": "La dashboard si adatta alle dimensioni dello schermo",
+    "test_steps": [
+      {
+        "step": "Accedi alla dashboard utilizzando uno schermo di piccole dimensioni (es. smartphone)",
+        "expected": "Il layout della dashboard si adatta alle dimensioni dello schermo"
+      },
+      {
+        "step": "Verifica che tutti gli elementi siano accessibili e utilizzabili",
+        "expected": "Tutti gli elementi sono accessibili e funzionali"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC2"
+  }
+]

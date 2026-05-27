@@ -1,0 +1,29 @@
+# Configuration file for Test Code Generation Orchestrator
+# This file contains all paths, models, and processing settings
+
+# File paths configuration
+paths:
+  # Core input files
+  dependency_graph: "./input_files/include_graph/include_graph.json"
+  test_parameters: "./input_files/parameters/test_parameters.env"
+  pom_folder: "./input_files/pom"
+  existing_code: "./input_files/reporter_minimal.js"
+  test_cases_folder: "./input_files/test_cases/"
+  
+  # Template and output paths (structure: {base}/{processing_type}/{configuration}/{model})
+  prompts_base: "./prompts"
+  output_base: "./output"
+  logs_base: "./logs"
+
+# Model configuration
+models:
+  default: "llama3.3:latest"
+  available:
+    - "llama3.3:latest"
+    - "codellama:70b"
+
+# Processing configuration
+processing:
+  default_configuration: "few_shot"
+  default_type: "single"  # Can be "single" or "batch"
+  temperature: 0.0

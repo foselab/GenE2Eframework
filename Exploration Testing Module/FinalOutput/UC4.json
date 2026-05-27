@@ -1,0 +1,97 @@
+[
+  {
+    "test_case_id": "UC4_TC1",
+    "title": "Apertura modulo SAVE con successo",
+    "preconditions": "UC1",
+    "postconditions": "Il modulo SAVE viene aperto correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del menù laterale di sinistra relativa al modulo SAVE",
+        "expected": "La sezione del menù laterale è visualizzata correttamente"
+      },
+      {
+        "step": "Seleziona il modulo SAVE",
+        "expected": "Il modulo SAVE si apre nella pagina principale"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC4"
+  },
+  {
+    "test_case_id": "UC4_TC2",
+    "title": "Apertura modulo SAVE senza autorizzazione",
+    "preconditions": "UC1",
+    "postconditions": "Il sistema non consente l’accesso al modulo SAVE",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del menù laterale di sinistra come utente non autorizzato",
+        "expected": "La sezione del menù laterale è visualizzata ma il modulo SAVE non è accessibile"
+      },
+      {
+        "step": "Tenta di selezionare il modulo SAVE",
+        "expected": "Il sistema mostra un messaggio di accesso negato"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC4"
+  },
+  {
+    "test_case_id": "UC4_TC3",
+    "title": "Apertura modulo SAVE con menù laterale non visibile",
+    "preconditions": "UC1",
+    "postconditions": "Il sistema visualizza un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Accedi alla pagina principale senza che il menù laterale sia visibile",
+        "expected": "La pagina principale è caricata ma il menù laterale non è presente"
+      },
+      {
+        "step": "Tenta di aprire il modulo SAVE",
+        "expected": "Il sistema visualizza un messaggio di errore per la mancanza del menù laterale"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC4"
+  },
+  {
+    "test_case_id": "UC4_TC4",
+    "title": "Boundary test: selezione modulo SAVE con più clic rapidi",
+    "preconditions": "UC1",
+    "postconditions": "Il sistema gestisce correttamente i clic multipli",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del menù laterale di sinistra relativa al modulo SAVE",
+        "expected": "La sezione del menù laterale è visualizzata correttamente"
+      },
+      {
+        "step": "Esegui più clic rapidi sul modulo SAVE",
+        "expected": "Il sistema apre il modulo SAVE una sola volta"
+      }
+    ],
+    "test_type": "Boundary",
+    "priority": "Bassa",
+    "use_case_id": "UC4"
+  },
+  {
+    "test_case_id": "UC4_TC5",
+    "title": "Usability test: accessibilità del modulo SAVE per utenti con disabilità",
+    "preconditions": "UC1",
+    "postconditions": "Il sistema garantisce l’accessibilità per gli utenti con disabilità",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del menù laterale di sinistra relativa al modulo SAVE utilizzando strumenti di accessibilità",
+        "expected": "La sezione del menù laterale è accessibile e navigabile"
+      },
+      {
+        "step": "Seleziona il modulo SAVE utilizzando gli strumenti di accessibilità",
+        "expected": "Il modulo SAVE si apre correttamente e rimane accessibile"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC4"
+  }
+]

@@ -1,0 +1,163 @@
+[
+  {
+    "test_case_id": "UC1_TC1",
+    "title": "Login con credenziali valide",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "L’utente è autenticato ed è a conoscenza che l’operazione ha avuto successo",
+    "test_steps": [
+      {
+        "step": "Inserisci le credenziali corrette nel form di login",
+        "expected": "Il sistema accetta le credenziali"
+      },
+      {
+        "step": "Clicca il tasto “Login”",
+        "expected": "Il processo di autenticazione ha inizio"
+      },
+      {
+        "step": "Visualizza il messaggio di operazione completata con successo",
+        "expected": "L’utente è ora autenticato e visualizza la pagina di destinazione"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC2",
+    "title": "Login con credenziali errate",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "L’utente visualizza un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Inserisci credenziali non valide nel form di login",
+        "expected": "Il sistema rileva le credenziali errate"
+      },
+      {
+        "step": "Clicca il tasto “Login”",
+        "expected": "Il processo di autenticazione fallisce"
+      },
+      {
+        "step": "Visualizza un messaggio di errore relativo alle credenziali",
+        "expected": "L’utente può riprovare l’accesso"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Alta",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC3",
+    "title": "Cambio password alla prima autenticazione",
+    "preconditions": "L’utente non è autenticato e deve cambiare la password di default",
+    "postconditions": "La nuova password è stata impostata con successo",
+    "test_steps": [
+      {
+        "step": "Inserisci le credenziali di default nel form di login",
+        "expected": "Il sistema richiede il cambio della password"
+      },
+      {
+        "step": "Inserisci la nuova password e confermala",
+        "expected": "Il sistema accetta la nuova password"
+      },
+      {
+        "step": "Completa il processo di autenticazione con la nuova password",
+        "expected": "L’utente è ora autenticato con la nuova password"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Media",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC4",
+    "title": "Inserimento di credenziali parzialmente corrette",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "Il sistema rileva l’errore e richiede la correzione",
+    "test_steps": [
+      {
+        "step": "Inserisci solo una parte delle credenziali correttamente (es. username giusto, password sbagliata)",
+        "expected": "Il sistema segnala un errore parziale"
+      },
+      {
+        "step": "Clicca il tasto “Login”",
+        "expected": "Il processo di autenticazione fallisce parzialmente"
+      },
+      {
+        "step": "Visualizza un messaggio di errore relativo alle credenziali parzialmente corrette",
+        "expected": "L’utente può riprovare l’accesso"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC5",
+    "title": "Tentativi multipli di accesso con credenziali errate",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "Il sistema blocca temporaneamente l’accesso dopo più tentativi falliti",
+    "test_steps": [
+      {
+        "step": "Inserisci credenziali errate nel form di login più volte",
+        "expected": "Il sistema rileva i tentativi multipli"
+      },
+      {
+        "step": "Clicca il tasto “Login” ripetutamente",
+        "expected": "Il processo di autenticazione fallisce ogni volta"
+      },
+      {
+        "step": "Visualizza un messaggio di blocco temporaneo dell’account",
+        "expected": "L’utente deve attendere prima di poter riprovare l’accesso"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Alta",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC6",
+    "title": "Inserimento di caratteri speciali nelle credenziali",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "Il sistema gestisce correttamente i caratteri speciali",
+    "test_steps": [
+      {
+        "step": "Inserisci credenziali contenenti caratteri speciali (es. @, #, $)",
+        "expected": "Il sistema accetta le credenziali con caratteri speciali"
+      },
+      {
+        "step": "Clicca il tasto “Login”",
+        "expected": "Il processo di autenticazione procede normalmente"
+      },
+      {
+        "step": "Visualizza un messaggio di operazione completata con successo",
+        "expected": "L’utente è ora autenticato"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Media",
+    "use_case_id": "UC1"
+  },
+  {
+    "test_case_id": "UC1_TC7",
+    "title": "SQL Injection nel campo di login",
+    "preconditions": "L’utente non è autenticato",
+    "postconditions": "Il sistema rileva e blocca la SQL injection",
+    "test_steps": [
+      {
+        "step": "Inserisci una stringa di SQL injection nel form di login (es. ' OR 1=1 --)",
+        "expected": "Il sistema rileva la SQL injection"
+      },
+      {
+        "step": "Clicca il tasto “Login”",
+        "expected": "Il processo di autenticazione fallisce e il sistema segnala un errore di sicurezza"
+      },
+      {
+        "step": "Visualizza un messaggio di errore relativo alla SQL injection",
+        "expected": "L’utente non può accedere al sistema"
+      }
+    ],
+    "test_type": "Sicurezza",
+    "priority": "Alta",
+    "use_case_id": "UC1"
+  }
+]

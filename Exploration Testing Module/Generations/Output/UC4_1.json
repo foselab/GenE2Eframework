@@ -1,0 +1,78 @@
+[
+  {
+    "test_case_id": "UC4.1_TC1",
+    "title": "Visualizzazione della sezione di gestione impianto con utente autorizzato",
+    "preconditions": "UC4",
+    "postconditions": "La sezione viene visualizzata correttamente",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del modulo SAVE come utente autorizzato",
+        "expected": "La sezione è accessibile"
+      },
+      {
+        "step": "Naviga nella barra orizzontale dedicata agli impianti",
+        "expected": "La sezione di gestione impianto viene visualizzata"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC4.1"
+  },
+  {
+    "test_case_id": "UC4.1_TC2",
+    "title": "Tentativo di accesso alla sezione senza autorizzazione",
+    "preconditions": "UC4",
+    "postconditions": "Accesso negato",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del modulo SAVE come utente non autorizzato",
+        "expected": "La sezione non è accessibile"
+      },
+      {
+        "step": "Tenta di navigare nella barra orizzontale dedicata agli impianti",
+        "expected": "Viene mostrato un messaggio di accesso negato"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC4.1"
+  },
+  {
+    "test_case_id": "UC4.1_TC3",
+    "title": "Visualizzazione della sezione con dati di impianto non presenti",
+    "preconditions": "UC4",
+    "postconditions": "La sezione viene visualizzata senza errori",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del modulo SAVE come utente autorizzato",
+        "expected": "La sezione è accessibile"
+      },
+      {
+        "step": "Naviga nella barra orizzontale dedicata agli impianti senza dati di impianto presenti",
+        "expected": "La sezione di gestione impianto viene visualizzata con un messaggio informativo"
+      }
+    ],
+    "test_type": "Edge",
+    "priority": "Bassa",
+    "use_case_id": "UC4.1"
+  },
+  {
+    "test_case_id": "UC4.1_TC4",
+    "title": "Usabilità della sezione di gestione impianto",
+    "preconditions": "UC4",
+    "postconditions": "La sezione è facilmente navigabile e comprensibile",
+    "test_steps": [
+      {
+        "step": "Accedi alla sezione del modulo SAVE come utente autorizzato",
+        "expected": "La sezione è accessibile"
+      },
+      {
+        "step": "Naviga nella barra orizzontale dedicata agli impianti e valuta l’usabilità della sezione",
+        "expected": "La sezione è facile da utilizzare e comprendere"
+      }
+    ],
+    "test_type": "Usabilità",
+    "priority": "Alta",
+    "use_case_id": "UC4.1"
+  }
+]

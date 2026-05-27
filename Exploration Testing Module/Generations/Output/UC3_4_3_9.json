@@ -1,0 +1,133 @@
+[
+  {
+    "test_case_id": "UC3.4.3.9_TC1",
+    "title": "Modifica dati punto luce con informazioni valide",
+    "preconditions": "UC3.4.3",
+    "postconditions": "L’utente visualizza un messaggio di conferma dell’operazione andata a buon fine",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected": "Il sistema mostra i pannelli elettrici relativi al POD"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona un pannello elettrico",
+        "expected": "Il sistema mostra i punti luce relativi al pannello elettrico"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati punti luce e compila il form con informazioni valide",
+        "expected": "Il sistema accetta le modifiche"
+      },
+      {
+        "step": "Applica le modifiche con l’apposito tasto",
+        "expected": "Il sistema visualizza un messaggio di conferma dell’operazione"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.3.9"
+  },
+  {
+    "test_case_id": "UC3.4.3.9_TC2",
+    "title": "Modifica dati punto luce con informazioni non valide",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Viene mostrato un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected": "Il sistema mostra i pannelli elettrici relativi al POD"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato e seleziona un pannello elettrico",
+        "expected": "Il sistema mostra i punti luce relativi al pannello elettrico"
+      },
+      {
+        "step": "Seleziona il tab relativo ai dati punti luce e compila il form con informazioni non valide (es. campi obbligatori vuoti)",
+        "expected": "Il sistema mostra un messaggio di errore"
+      },
+      {
+        "step": "Tenta di applicare le modifiche con l’apposito tasto",
+        "expected": "L’operazione non va a buon fine e viene mostrato un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.3.9"
+  },
+  {
+    "test_case_id": "UC3.4.3.9_TC3",
+    "title": "Modifica dati punto luce senza selezionare il pannello elettrico",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Il sistema non permette di procedere con la modifica",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected": "Il sistema mostra i pannelli elettrici relativi al POD"
+      },
+      {
+        "step": "Non selezionare alcun pannello elettrico",
+        "expected": "Il sistema non permette di accedere ai dati punti luce"
+      },
+      {
+        "step": "Tenta di selezionare il tab relativo ai dati punti luce",
+        "expected": "L’accesso è negato"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.3.9"
+  },
+  {
+    "test_case_id": "UC3.4.3.9_TC4",
+    "title": "Modifica dati punto luce con caratteri speciali nei campi di input",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Il sistema gestisce correttamente i caratteri speciali",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected": "Il sistema mostra i pannelli elettrici relativi al POD"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato, seleziona un pannello elettrico e accedi ai dati punti luce",
+        "expected": "Il sistema mostra i campi di input per la modifica"
+      },
+      {
+        "step": "Inserisci caratteri speciali (es. @,#,$) nei campi di input",
+        "expected": "Il sistema gestisce correttamente i caratteri speciali"
+      },
+      {
+        "step": "Applica le modifiche con l’apposito tasto",
+        "expected": "Le modifiche vengono applicate correttamente"
+      }
+    ],
+    "test_type": "Edge",
+    "priority": "Bassa",
+    "use_case_id": "UC3.4.3.9"
+  },
+  {
+    "test_case_id": "UC3.4.3.9_TC5",
+    "title": "Modifica dati punto luce con campi di input vuoti",
+    "preconditions": "UC3.4.3",
+    "postconditions": "Il sistema mostra un messaggio di errore",
+    "test_steps": [
+      {
+        "step": "Seleziona il POD per la modifica tramite il menù ad albero di sinistra",
+        "expected": "Il sistema mostra i pannelli elettrici relativi al POD"
+      },
+      {
+        "step": "Espandi la visione ad albero del POD selezionato, seleziona un pannello elettrico e accedi ai dati punti luce",
+        "expected": "Il sistema mostra i campi di input per la modifica"
+      },
+      {
+        "step": "Lascia vuoti tutti i campi di input obbligatori",
+        "expected": "Il sistema mostra un messaggio di errore"
+      },
+      {
+        "step": "Tenta di applicare le modifiche con l’apposito tasto",
+        "expected": "L’operazione non va a buon fine e viene mostrato un messaggio di errore"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.3.9"
+  }
+]

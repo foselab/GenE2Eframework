@@ -1,0 +1,105 @@
+[
+  {
+    "test_case_id": "UC3.4.4_TC1",
+    "title": "Congelamento scheda censimento con conferma",
+    "preconditions": "UC3.4",
+    "postconditions": "L’utente non può più svolgere qualsiasi azione sulla scheda e lo stato è non attivo",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di congelamento della scheda censimento",
+        "expected": "Viene richiesta la conferma del congelamento"
+      },
+      {
+        "step": "Conferma il congelamento della scheda",
+        "expected": "Viene visualizzato un messaggio di conferma dell’operazione"
+      },
+      {
+        "step": "Verifica lo stato della scheda dopo il congelamento",
+        "expected": "La scheda è non attiva e non modificabile"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.4"
+  },
+  {
+    "test_case_id": "UC3.4.4_TC2",
+    "title": "Congelamento scheda censimento con annullamento",
+    "preconditions": "UC3.4",
+    "postconditions": "Il congelamento non viene applicato e la scheda rimane nello stato precedente",
+    "test_steps": [
+      {
+        "step": "Seleziona l’operazione di congelamento della scheda censimento",
+        "expected": "Viene richiesta la conferma del congelamento"
+      },
+      {
+        "step": "Annulla il congelamento della scheda",
+        "expected": "Il congelamento non viene applicato e si torna allo stato precedente"
+      },
+      {
+        "step": "Verifica lo stato della scheda dopo l’annullamento",
+        "expected": "La scheda rimane nello stato originale, senza modifiche"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.4"
+  },
+  {
+    "test_case_id": "UC3.4.4_TC3",
+    "title": "Congelamento di una scheda censimento già congelata",
+    "preconditions": "UC3.4",
+    "postconditions": "Viene visualizzato un messaggio di errore indicante che la scheda è già congelata",
+    "test_steps": [
+      {
+        "step": "Seleziona una scheda censimento già congelata e seleziona l’operazione di congelamento",
+        "expected": "Viene visualizzato un messaggio di errore"
+      },
+      {
+        "step": "Verifica il messaggio di errore",
+        "expected": "Il messaggio indica che la scheda è già in stato non attivo"
+      }
+    ],
+    "test_type": "Edge",
+    "priority": "Bassa",
+    "use_case_id": "UC3.4.4"
+  },
+  {
+    "test_case_id": "UC3.4.4_TC4",
+    "title": "Congelamento senza selezionare la scheda censimento",
+    "preconditions": "UC3.4",
+    "postconditions": "Viene visualizzato un messaggio di errore per mancanza di selezione",
+    "test_steps": [
+      {
+        "step": "Tenta di eseguire l’operazione di congelamento senza aver selezionato una scheda censimento",
+        "expected": "Viene visualizzato un messaggio di errore"
+      },
+      {
+        "step": "Verifica il messaggio di errore",
+        "expected": "Il messaggio richiede la selezione di una scheda"
+      }
+    ],
+    "test_type": "Negativo",
+    "priority": "Media",
+    "use_case_id": "UC3.4.4"
+  },
+  {
+    "test_case_id": "UC3.4.4_TC5",
+    "title": "Congelamento con più schede censimento selezionate",
+    "preconditions": "UC3.4",
+    "postconditions": "Tutte le schede selezionate vengono congelate correttamente",
+    "test_steps": [
+      {
+        "step": "Seleziona più schede censimento e avvia l’operazione di congelamento",
+        "expected": "Viene richiesta la conferma per ogni scheda"
+      },
+      {
+        "step": "Conferma il congelamento per tutte le schede selezionate",
+        "expected": "Tutte le schede vengono congelate e visualizzano lo stato non attivo"
+      }
+    ],
+    "test_type": "Positivo",
+    "priority": "Alta",
+    "use_case_id": "UC3.4.4"
+  }
+]
