@@ -5,4 +5,4 @@ It was developed upon the Ollama framework to manage and run local Large Languag
 Only two models, Meta Llama 3.3 70B and CodeLlama (a foundational model for code generation tasks, built on top of Llama 2) are employed.
 
 
-An appendix to ease access to key artifacts examples (about use cases, prompt templates, prompts, test case) is ./GenE2E_Appendix.pdf 
+An appendix to ease access to key artifacts examples (about use cases, prompt templates, prompts, test case) is `GenE2E_Appendix.pdf`.
