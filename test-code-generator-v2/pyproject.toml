@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "test-code-generator"
+version = "0.1.0"
+description = ""
+authors = ["Simone Ronzoni <sronzoni99@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "test_code_generator", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.12"
+ollama = "^0.4.8"
+esprima = "^4.0.1"
+# Needed for BLEU score
+nltk = "^3.9.1"
+codebleu = "^0.7.0"
+# Needed for codebleu to support Javascript language. Version 0.21 avoids conflicts
+tree-sitter-javascript = "0.21"
+# Needed for cosine similarity
+scikit-learn = "^1.7.0"
+numpy = "^2.3.0"
+# For Fleiss Kappa
+statsmodels = "^0.14.4"
+pandas = "^2.3.0"
+openpyxl = "^3.1.5"
+scipy = "^1.15.3"
+matplotlib = "^3.10.3"
+seaborn = "^0.13.2"
+pyyaml = "^6.0.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

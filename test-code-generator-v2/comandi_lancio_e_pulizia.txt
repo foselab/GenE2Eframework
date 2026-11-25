@@ -1,0 +1,91 @@
+rm -rf output/single/zero_shot/qwen3-coder
+rm -rf output/single/one_shot/qwen3-coder
+rm -rf output/single/few_shot/qwen3-coder
+rm -rf output/batch/zero_shot/qwen3-coder
+rm -rf output/batch/one_shot/qwen3-coder
+rm -rf output/batch/few_shot/qwen3-coder
+rm -rf output/single/zero_shot/qwen3-instruct
+rm -rf output/single/one_shot/qwen3-instruct
+rm -rf output/single/few_shot/qwen3-instruct
+rm -rf output/batch/zero_shot/qwen3-instruct
+rm -rf output/batch/one_shot/qwen3-instruct
+rm -rf output/batch/few_shot/qwen3-instruct
+rm -rf output/single/zero_shot/qwen3.8
+rm -rf output/single/one_shot/qwen3.8
+rm -rf output/single/few_shot/qwen3.8
+rm -rf output/batch/zero_shot/qwen3.8
+rm -rf output/batch/one_shot/qwen3.8
+rm -rf output/batch/few_shot/qwen3.8
+rm -rf output/single/zero_shot/qwen3
+rm -rf output/single/one_shot/qwen3
+rm -rf output/single/few_shot/qwen3
+rm -rf output/batch/zero_shot/qwen3
+rm -rf output/batch/one_shot/qwen3
+rm -rf output/batch/few_shot/qwen3
+rm -rf output/single/zero_shot/muse-glimmer
+rm -rf output/single/one_shot/muse-glimmer
+rm -rf output/single/few_shot/muse-glimmer
+rm -rf output/batch/zero_shot/muse-glimmer
+rm -rf output/batch/one_shot/muse-glimmer
+rm -rf output/batch/few_shot/muse-glimmer
+rm -rf output/single/zero_shot/llama3.3
+rm -rf output/single/one_shot/llama3.3
+rm -rf output/single/few_shot/llama3.3
+rm -rf output/batch/zero_shot/llama3.3
+rm -rf output/batch/one_shot/llama3.3
+rm -rf output/batch/few_shot/llama3.3
+rm -rf output/single/zero_shot/codellama
+rm -rf output/single/one_shot/codellama
+rm -rf output/single/few_shot/codellama
+rm -rf output/batch/zero_shot/codellama
+rm -rf output/batch/one_shot/codellama
+rm -rf output/batch/few_shot/codellama
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3-instruct:30b" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3:30b" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot
+
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot

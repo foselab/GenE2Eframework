@@ -1,0 +1,608 @@
+rm -rf output/single/zero_shot/qwen3-coder
+rm -rf output/single/one_shot/qwen3-coder
+rm -rf output/single/few_shot/qwen3-coder
+rm -rf output/batch/zero_shot/qwen3-coder
+rm -rf output/batch/one_shot/qwen3-coder
+rm -rf output/batch/few_shot/qwen3-coder
+rm -rf output/single/zero_shot/qwen3.8
+rm -rf output/single/one_shot/qwen3.8
+rm -rf output/single/few_shot/qwen3.8
+rm -rf output/batch/zero_shot/qwen3.8
+rm -rf output/batch/one_shot/qwen3.8
+rm -rf output/batch/few_shot/qwen3.8
+rm -rf output/single/zero_shot/muse-glimmer
+rm -rf output/single/one_shot/muse-glimmer
+rm -rf output/single/few_shot/muse-glimmer
+rm -rf output/batch/zero_shot/muse-glimmer
+rm -rf output/batch/one_shot/muse-glimmer
+rm -rf output/batch/few_shot/muse-glimmer
+rm -rf output/single/zero_shot/llama3.3
+rm -rf output/single/one_shot/llama3.3
+rm -rf output/single/few_shot/llama3.3
+rm -rf output/batch/zero_shot/llama3.3
+rm -rf output/batch/one_shot/llama3.3
+rm -rf output/batch/few_shot/llama3.3
+rm -rf output/single/zero_shot/codellama
+rm -rf output/single/one_shot/codellama
+rm -rf output/single/few_shot/codellama
+rm -rf output/batch/zero_shot/codellama
+rm -rf output/batch/one_shot/codellama
+rm -rf output/batch/few_shot/codellama
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c zero_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c one_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt single -c few_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c zero_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c one_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3-coder:30b" -pt batch -c few_shot -uc UC6
+
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c zero_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c one_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt single -c few_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c zero_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c one_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "qwen3.8:27b" -pt batch -c few_shot -uc UC6
+
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c zero_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c one_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt single -c few_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c zero_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c one_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "muse-glimmer" -pt batch -c few_shot -uc UC6
+
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c zero_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c one_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt single -c few_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c zero_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c one_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "llama3.3:latest" -pt batch -c few_shot -uc UC6
+
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c zero_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c one_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC1 -tc "UC1_TC1" -tc "UC1_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC2 -tc "UC2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC2.1 -tc "UC2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC2.2 -tc "UC2.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC2.3 -tc "UC2.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC2.4 -tc "UC2.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3 -tc "UC3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.1 -tc "UC3.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.2 -tc "UC3.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.2.1 -tc "UC3.2.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.3 -tc "UC3.3_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.4 -tc "UC3.4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.4.1 -tc "UC3.4.1_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.4.2 -tc "UC3.4.2_TC1" -tc "UC3.4.2_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC3.4.5 -tc "UC3.4.5_TC1" -tc "UC3.4.5_TC2"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC4 -tc "UC4_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC4.2 -tc "UC4.2_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC5 -tc "UC5_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt single -c few_shot -uc UC6 -tc "UC6_TC1"
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c zero_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c one_shot -uc UC6
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC2.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC2.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC2.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.2.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.3
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.4.1
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC3.4.5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC4
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC4.2
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC5
+poetry run python -m test_code_generator.orchestrator -m "codellama:70b" -pt batch -c few_shot -uc UC6
+
+
+
