@@ -48,7 +48,8 @@ export class NavbarPage {
   }
 
   async isEnglishLanguageSelected() {
-    return await this.englishLanguageSelection.isVisible();
+    const cls = await this.englishLanguageSelection.getAttribute('class');
+    return (cls || '').includes('active');
   }
 
   async clickLogout() {

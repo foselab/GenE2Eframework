@@ -4,7 +4,7 @@ export class SaveToolPage {
 
     // Locators
     this.step2Tab = page.getByText('Step 2 - Investimenti', { exact: false }).first();
-    this.addInvestmentButton = page.getByRole('button', { name: 'Aggiungi Impianto' });
+    this.addInvestmentButton = page.getByRole('button', { name: 'Aggiungi Investimento' });
     this.investmentNameInput = page.locator('input[name="label_investment"]');
     this.applyButton = page.getByRole('button', { name: 'Applica' });
     this.backButton = page.getByRole('button', { name: 'Torna' });
